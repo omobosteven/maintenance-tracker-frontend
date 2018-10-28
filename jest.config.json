@@ -1,0 +1,14 @@
+{
+  "setupFiles": [
+    "raf/polyfill",
+    "<rootDir>/src/tests/setupTest.js"
+  ],
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "testPathIgnorePatterns": [
+    "<rootDir>/node_modules/"
+  ],
+  "collectCoverage": true,
+  "moduleNameMapper": {
+    "\\.(gif|ttf|eot|svg|png|jpg|jpeg|css|sass|scss)$": "<rootDir>./src/tests/__mocks__/fileMock.js"
+  }
+}

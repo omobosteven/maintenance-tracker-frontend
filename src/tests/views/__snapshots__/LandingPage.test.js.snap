@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LandingPage component should render a snapshot of the userNavigation component 1`] = `
+<div>
+  This is from the LandingPage component
+  <Link
+    replace={false}
+    to="/auth/login"
+  >
+    SIGN_IN
+  </Link>
+</div>
+`;
