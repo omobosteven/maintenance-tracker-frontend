@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store/index';
-import App from './components/App';
+import AppRoutes from './routers/AppRoutes';
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <AppRoutes />
   </Provider>,
   document.getElementById('app')
   );
