@@ -1,3 +1,88 @@
-h1 {
-  color: red;
+.main-content {
+  background-color:#6c9a9e91;
+  color: #fff;
+  padding: 5.0rem 2.0rem;
+  text-align: center;
+  width: 95%;
+}
+
+.main-heading {
+  font-size: 3.1rem;
+  margin: 0;
+  text-decoration: underline overline #e1b12c;
+}
+
+.main-text {
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+}
+
+.main-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2.0rem;
+}
+
+.main-btn {
+  align-self: center;
+  background-color: #e4f3fc;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  color: #537579;
+  font-size: 2.6rem;
+  margin-bottom: 2.0rem;
+  padding-top: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  width: 25.0rem;
+}
+.main-btn:last-child {
+  margin-bottom: 0;
+}
+
+.main-btn:hover {
+  background-color: #00a8bb;
+  border-color: #00a8bb;
+  color: #e4f3fc;
+}
+
+@media (min-width: 576px) {
+  .main-heading {
+    font-size: 5.0rem;
+  }
+
+  .main-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    width: 90%;
+  }
+
+  .main-heading {
+    font-size: 7.0rem;
+    margin: 0;
+  }
+
+  .main-buttons {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50.0rem;
+  }
+
+  .main-btn {
+    margin-bottom: 0;
+    width: 20.0rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-content {
+    max-width: 85.0rem;
+  }
 }

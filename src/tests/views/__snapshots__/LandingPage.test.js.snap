@@ -1,13 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LandingPage component should render a snapshot of the userNavigation component 1`] = `
-<div>
-  This is from the LandingPage component
-  <Link
-    replace={false}
-    to="/auth/login"
+<section
+  className="row main-content"
+>
+  <h1
+    className="main-heading"
   >
-    SIGN_IN
-  </Link>
-</div>
+    Maintenance Tracker
+  </h1>
+  <p
+    className="main-text"
+  >
+    Lorem Ipsum cool text right here...
+  </p>
+  <div
+    className="main-buttons"
+  >
+    <Link
+      className="btn main-btn"
+      replace={false}
+      to="/auth/signup"
+    >
+      Signup
+    </Link>
+    <Link
+      className="btn main-btn"
+      replace={false}
+      to="/auth/login"
+    >
+      Login
+    </Link>
+  </div>
+</section>
 `;
