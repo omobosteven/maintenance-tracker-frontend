@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-attachment: fixed;
+  background-image: linear-gradient(#000000b4, #000000b4), url("https://image.ibb.co/gTYfqq/repairs.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #555;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 62.5%;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.row {
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
+footer p {
+  color: #00a8ff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding-bottom: 1.6rem;
+  text-align: center;
+}
+
+.btn,
+input[type=submit],
+input[type=button] {
+  color: #fff;
+  display: inline-block;
+  font-weight: 300;
+  padding: 10px 30px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+input[type=submit] {
+  background-color: #00a8bb;
+  border: 1px solid #00a8bb;
+}
+
+input[type=submit]:hover,
+input[type=submit]:active {
+  background-color: #004e77;
+}
+
+input[type=button] {
+  background-color: #bb3615;
+  border: 1px solid #bb3615;
+}
+
+input[type=button]:hover,
+input[type=button]:active {
+  background-color: #882810;
+}
+
+.section-heading {
+  color: #fff;
+  text-align: center;
+}
+
+.main-content,
+.section-form,
+.section-requests,
+.section-details {
+  margin-bottom: 10.0rem;
+  margin-top: 10.0rem;
+}
