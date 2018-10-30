@@ -1,7 +1,9 @@
 import {
   CREATE_REQUEST,
   CREATE_REQUEST_FAIL,
+  GET_REQUEST,
   GET_REQUESTS,
+  GET_REQUEST_FAIL,
   GET_REQUESTS_FAIL,
   DELETE_REQUEST_ERROR_MESSAGE
 } from '../constants/types';
@@ -32,10 +34,18 @@ export default (state = initialState, action) => {
         requests: action.requests
       };
 
-    case GET_REQUESTS_FAIL:
+    case GET_REQUEST:
       return {
         ...state,
-        requests: []
+        request: action.request
+      };
+
+    case GET_REQUESTS_FAIL:
+    case GET_REQUEST_FAIL:
+      return {
+        ...state,
+        requests: [],
+        request: null
       };
 
     case DELETE_REQUEST_ERROR_MESSAGE:

@@ -4,7 +4,8 @@ const routes = {
   SIGN_UP: '/auth/signup',
   USER_REQUESTS: '/users/requests',
   CREATE_REQUESTS: '/create-request',
-  USER_REQUEST: '/requests/:id'
+  EDIT_REQUESTS: '/edit-request/:id',
+  USER_REQUEST: '/users/requests/:id'
 };
 
 export default routes;
