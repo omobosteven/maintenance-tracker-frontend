@@ -6,8 +6,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import NotFoundPage from '../views/NotFoundPage';
 import LoginPage from '../views/LoginPage';
-import SignupPage from '../views/SignupPage';
+import SignupForm from '../components/auth/SignupForm';
 import LandingPage from '../views/LandingPage';
+import Requests from '../components/Requests';
 
 const AppRoutes = () => (
   <BrowserRouter>
@@ -16,7 +17,8 @@ const AppRoutes = () => (
       <Switch>
         <Route exact path={routes.LANDING} component={LandingPage} />
         <Route exact path={routes.SIGN_IN} component={LoginPage} />
-        <Route exact path={routes.SIGN_UP} component={SignupPage} />
+        <Route exact path={routes.SIGN_UP} component={SignupForm} />
+        <Route exact path={routes.USER_REQUESTS} component={Requests} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer />

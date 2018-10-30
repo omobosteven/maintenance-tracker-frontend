@@ -1,0 +1,150 @@
+.alert {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  max-width: 600px;
+  padding: 10px;
+  text-align: center;
+}
+
+.closeAlert {
+  border: 0;
+  color: #e84118;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.8px 3px;
+}
+
+.fail {
+  background-color: #f44336;
+}
+
+.success {
+  background-color: #43af32;
+}
+
+.signup-form {
+  padding: 1.6rem;
+  width: 100%;
+}
+
+.signup-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.3rem;
+}
+
+.card-form {
+  background-color: #6c9a9e91;
+  max-width: 600px;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+
+.form-title {
+  color: #fff;
+  margin-bottom: 4.0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form-group label {
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 400;
+  padding-bottom: 0.9rem;
+}
+
+.form-control
+ {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    padding: 10px;
+}
+
+.signup-form .submit-btn {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.6rem;
+}
+
+.submit-btn input {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-info {
+  align-self: center;
+  color: #fff;
+  margin-top: 1.0rem;
+}
+
+.form-info  .form-link {
+  color: #e1b12c;
+  margin-top: 1.0rem;
+}
+
+.update-btn input[type=button]{
+  margin-top: 1.6rem;
+}
+
+.display-error {
+  background: #e84118;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.3rem;
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .signup-form .form-group {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .display-error {
+    font-size: 1.9rem;
+    margin-left: 17.2rem;
+    max-width: 39.6rem;
+  }
+
+  .signup-form .submit-btn {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .update-btn input[type=button]{
+    margin-top: 0;
+    margin-left: 17.5rem;
+  }
+
+  .signup-form .create-btn {
+    justify-content: center;
+  }
+
+  .form-control {
+    width: 70%;
+  }
+
+  textarea {
+    margin-left: 7.3rem;
+  }
+
+  .signup-form .form-info {
+    margin-left: 1.6rem;
+  }
+
+  .display-error {
+    font-size: 1.3rem;
+    margin-left: 17.2rem;
+    max-width: 39.6rem;
+  }
+}
