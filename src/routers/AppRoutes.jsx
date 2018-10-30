@@ -5,10 +5,11 @@ import routes from '../constants/routes';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import NotFoundPage from '../views/NotFoundPage';
-import LoginPage from '../views/LoginPage';
 import SignupForm from '../components/auth/SignupForm';
+import LoginForm from '../components/auth/LoginForm';
 import LandingPage from '../views/LandingPage';
 import Requests from '../components/Requests';
+import PrivateRoute from '../utils/PrivateRoute';
 
 const AppRoutes = () => (
   <BrowserRouter>
@@ -16,9 +17,9 @@ const AppRoutes = () => (
       <Header />
       <Switch>
         <Route exact path={routes.LANDING} component={LandingPage} />
-        <Route exact path={routes.SIGN_IN} component={LoginPage} />
         <Route exact path={routes.SIGN_UP} component={SignupForm} />
-        <Route exact path={routes.USER_REQUESTS} component={Requests} />
+        <Route exact path={routes.SIGN_IN} component={LoginForm} />
+        <PrivateRoute exact path={routes.USER_REQUESTS} component={Requests} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer />

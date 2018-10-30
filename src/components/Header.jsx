@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import appLogo from '../images/logo.png';
-import routes from '../constants/routes';
+import GuestNavigation from './navigation/GuestNavigation';
+import UserNavigation from './navigation/UserNavigation';
 
 export class Header extends Component {
   state = {
@@ -17,6 +20,8 @@ export class Header extends Component {
 
   render() {
     const { toggleNav } = this.state;
+    const { auth } = this.props;
+
     return (
       <header>
         <nav className="container">
@@ -35,8 +40,9 @@ export class Header extends Component {
               </button>
             </div>
             <ul className={`main-nav ${toggleNav}`} id="navbar-collapse">
-              <li><Link to={routes.SIGN_UP}>SignUp</Link></li>
-              <li><Link to={routes.SIGN_IN}>Login</Link></li>
+              {
+                auth ? <UserNavigation /> : <GuestNavigation />
+              }
             </ul>
           </div>
         </nav>
@@ -45,4 +51,12 @@ export class Header extends Component {
   }
 }
 
-export default Header;
+Header.propTypes = {
+  auth: PropTypes.bool
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, null)(Header);
