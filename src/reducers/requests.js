@@ -1,34 +1,30 @@
-import isEmpty from 'is-empty';
 import {
-  SET_CURRENT_USER,
-  DELETE_ERROR_MESSAGE,
-  SET_CURRENT_USER_FAIL
+  CREATE_REQUEST,
+  CREATE_REQUEST_FAIL,
+  DELETE_REQUEST_ERROR_MESSAGE
 } from '../constants/types';
 
 const initialState = {
-  isAuthenticated: false,
-  user: {},
+  requests: [],
+  request: null,
   error: {}
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case SET_CURRENT_USER:
+    case CREATE_REQUEST:
       return {
         ...state,
-        isAuthenticated: !isEmpty(action.user),
-        user: action.user
+        created: action.request
       };
 
-    case SET_CURRENT_USER_FAIL:
+    case CREATE_REQUEST_FAIL:
       return {
         ...state,
-        isAuthenticated: false,
-        user: {},
         error: action.error
       };
 
-    case DELETE_ERROR_MESSAGE:
+    case DELETE_REQUEST_ERROR_MESSAGE:
       return {
         ...state,
         error: {}

@@ -42,6 +42,7 @@
       "react/require-default-props" : 0,
       "import/no-named-as-default": 0,
       "jsx-a11y/label-has-for": 0,
+      "jsx-a11y/label-has-associated-control": 0,
       "jsx-a11y/anchor-is-valid": 0
     }
 }
