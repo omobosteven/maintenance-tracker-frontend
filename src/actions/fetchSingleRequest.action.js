@@ -24,6 +24,7 @@ const fetchSingleRequestsAction = id => dispatch => axios.get(
 )
   .then((response) => {
     dispatch(getRequest(response.data.data.request));
+    return response;
   })
   .catch((error) => {
     dispatch(getRequestError(error.response.data));

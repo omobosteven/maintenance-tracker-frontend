@@ -3,6 +3,8 @@ import {
   CREATE_REQUEST_FAIL,
   GET_REQUEST,
   GET_REQUESTS,
+  UPDATE_REQUEST,
+  UPDATE_REQUEST_FAIL,
   GET_REQUEST_FAIL,
   GET_REQUESTS_FAIL,
   DELETE_REQUEST_ERROR_MESSAGE
@@ -22,7 +24,14 @@ export default (state = initialState, action) => {
         created: action.request
       };
 
+    case UPDATE_REQUEST:
+      return {
+        ...state,
+        updated: action.request
+      };
+
     case CREATE_REQUEST_FAIL:
+    case UPDATE_REQUEST_FAIL:
       return {
         ...state,
         error: action.error
