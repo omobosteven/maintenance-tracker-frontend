@@ -8,6 +8,8 @@ import setAuthorizationToken from './utils/authorization';
 import setCurrentUserToStore from './utils/setCurrentUserToStore';
 import './styles/scss/App.scss';
 
+setAuthorizationToken();
+
 setCurrentUserToStore(store);
 
 ReactDOM.render(

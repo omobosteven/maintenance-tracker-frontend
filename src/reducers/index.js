@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import auth from './auth';
-import {
-  LOGOUT_USER
-} from '../constants/types';
+import requests from './requests';
+import { LOGOUT_USER } from '../constants/types';
 
 const appReducer = combineReducers({
-  auth
+  auth,
+  requests
 });
 
 const initialState = appReducer({}, {});

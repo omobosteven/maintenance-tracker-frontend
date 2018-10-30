@@ -9,6 +9,7 @@ import SignupForm from '../components/auth/SignupForm';
 import LoginForm from '../components/auth/LoginForm';
 import LandingPage from '../views/LandingPage';
 import Requests from '../components/Requests';
+import CreateRequestForm from '../components/requests/CreateRequests';
 import PrivateRoute from '../utils/PrivateRoute';
 
 const AppRoutes = () => (
@@ -20,6 +21,7 @@ const AppRoutes = () => (
         <Route exact path={routes.SIGN_UP} component={SignupForm} />
         <Route exact path={routes.SIGN_IN} component={LoginForm} />
         <PrivateRoute exact path={routes.USER_REQUESTS} component={Requests} />
+        <PrivateRoute exact path={routes.CREATE_REQUESTS} component={CreateRequestForm} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer />
