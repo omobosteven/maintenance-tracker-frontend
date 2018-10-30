@@ -30,6 +30,13 @@ export class Header extends Component {
               <Link to="/">
                 <img src={appLogo} alt="maintanace-tracker logo" className="logo" />
               </Link>
+              {auth.isAuthenticated && (
+                <p className="user">
+                  <span>{auth.user.username}</span>
+                  <br />
+                  Dashboard
+                </p>)
+              }
               <button
                 type="button"
                 id="navbar-toggler"
@@ -41,7 +48,7 @@ export class Header extends Component {
             </div>
             <ul className={`main-nav ${toggleNav}`} id="navbar-collapse">
               {
-                auth ? <UserNavigation /> : <GuestNavigation />
+                auth.isAuthenticated ? <UserNavigation /> : <GuestNavigation />
               }
             </ul>
           </div>
@@ -52,11 +59,11 @@ export class Header extends Component {
 }
 
 Header.propTypes = {
-  auth: PropTypes.bool
+  auth: PropTypes.instanceOf(Object)
 };
 
 const mapStateToProps = state => ({
-  auth: state.auth.isAuthenticated
+  auth: state.auth
 });
 
 export default connect(mapStateToProps, null)(Header);

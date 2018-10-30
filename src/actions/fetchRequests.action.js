@@ -19,14 +19,15 @@ export const deleteErrorMessages = () => ({
   type: DELETE_REQUEST_ERROR_MESSAGE
 });
 
-const fetchRequestsAction = () => dispatch => axios.get(
-  `${config.apiUrl}/users/requests`
-)
-  .then((response) => {
-    dispatch(getRequests(response.data.data.requests));
-  })
-  .catch((error) => {
-    dispatch(getRequestsError(error.response.data));
-  });
+const fetchRequestsAction = userRole => (dispatch) => {
+  const url = userRole === 1 ? `${config.apiUrl}/requests` : `${config.apiUrl}/users/requests`;
+  return axios.get(url)
+    .then((response) => {
+      dispatch(getRequests(response.data.data.requests));
+    })
+    .catch((error) => {
+      dispatch(getRequestsError(error.response.data));
+    });
+};
 
 export default fetchRequestsAction;
