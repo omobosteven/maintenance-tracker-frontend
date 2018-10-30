@@ -8,8 +8,8 @@ import RequestList from './requests/RequestList';
 
 class Requests extends Component {
   componentDidMount = () => {
-    const { fetchRequests } = this.props;
-    fetchRequests();
+    const { fetchRequests, userRole } = this.props;
+    fetchRequests(userRole);
   }
 
   render() {
@@ -25,10 +25,12 @@ class Requests extends Component {
       );
     }
 
+    const { userRole } = this.props;
+
     return (
       <section className="section-requests container">
         <div className="row">
-          <h2 className="section-heading">My Requests</h2>
+          <h2 className="section-heading">{ userRole === 1 ? 'All Request' : 'My Requests'}</h2>
         </div>
         <div className="row">
           <ul className="requests-list">
@@ -51,12 +53,14 @@ class Requests extends Component {
 }
 
 Requests.propTypes = {
+  userRole: PropTypes.number,
   fetchRequests: PropTypes.func.isRequired,
   requests: PropTypes.instanceOf(Array),
 };
 
 const mapStateToProps = state => ({
   requests: state.requests.requests,
+  userRole: state.auth.user.roleId
 });
 
 const matchDispatchToProps = dispatch => bindActionCreators({

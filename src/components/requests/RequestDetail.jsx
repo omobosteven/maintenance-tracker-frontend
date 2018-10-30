@@ -7,11 +7,13 @@ import PropTypes from 'prop-types';
 import Loading from '../common/Loading';
 import fetchSingleRequestAction from '../../actions/fetchSingleRequest.action';
 import routes from '../../constants/routes';
+import UserRequestStatus from './common/UserRequestStatus';
+import AdminRequestStatus from './common/AdminRequestStatus';
 
 class RequestDetails extends Component {
   componentDidMount = () => {
-    const { fetchRequest, match } = this.props;
-    fetchRequest(match.params.id);
+    const { fetchRequest, match, userRole } = this.props;
+    fetchRequest(match.params.id, userRole);
   }
 
   render() {
@@ -27,30 +29,7 @@ class RequestDetails extends Component {
       );
     }
 
-    const getStatusText = {
-      statusType: '',
-      statusClassname: ''
-    };
-
-    switch (request.statusId) {
-      case 1:
-        getStatusText.statusType = 'Pending';
-        getStatusText.statusClassname = 'request-pending';
-        break;
-      case 2:
-        getStatusText.statusType = 'Approved';
-        getStatusText.statusClassname = 'request-approved';
-        break;
-      case 3:
-        getStatusText.statusType = 'Disapproved';
-        getStatusText.statusClassname = 'request-disapproved';
-        break;
-      case 4:
-        getStatusText.statusType = 'Resolved';
-        getStatusText.statusClassname = 'request-resolved';
-        break;
-      default:
-    }
+    const { userRole, match } = this.props;
 
     return (
       <section className="section-details container">
@@ -59,7 +38,7 @@ class RequestDetails extends Component {
         </div>
         <div className="row card-details">
           <Link to={routes.USER_REQUESTS} className="close-link">X</Link>
-          { request.statusId === 1
+          { (request.statusId === 1 && userRole !== 1)
               && (
                 <Link to={`/edit-request/${request.requestId}`} className="edit-link">
                   <i className="mdi mdi-pencil-box-outline" />
@@ -71,6 +50,14 @@ class RequestDetails extends Component {
               <span className="details-heading">Ref_no:</span>
               <span className="detail">{`#${request.ref_no}`}</span>
             </p>
+            {
+              userRole === 1 && (
+              <p>
+                <span className="details-heading">User:</span>
+                <span className="detail">{request.email}</span>
+              </p>
+              )
+            }
             <p>
               <span className="details-heading">Type:</span>
               <span className="detail">{request.type === 1 ? 'Repair' : 'Maintenance'}</span>
@@ -85,12 +72,14 @@ class RequestDetails extends Component {
             </p>
             <p>
               <span className="details-heading">Description:</span>
-              <span className="detail">{request.description}</span>
+              <span className="detail">{cap(request.description)}</span>
             </p>
           </div>
-          <div className="request-status">
-            <p className={getStatusText.statusClassname}>{getStatusText.statusType}</p>
-          </div>
+          {
+            userRole === 1
+              ? <AdminRequestStatus status={request.statusId} requestId={match.params.id} />
+              : <UserRequestStatus status={request.statusId} />
+          }
         </div>
       </section>
     );
@@ -98,6 +87,7 @@ class RequestDetails extends Component {
 }
 
 RequestDetails.propTypes = {
+  userRole: PropTypes.number,
   fetchRequest: PropTypes.func.isRequired,
   request: PropTypes.instanceOf(Object),
   match: PropTypes.instanceOf(Object)
@@ -105,6 +95,7 @@ RequestDetails.propTypes = {
 
 const mapStateToProps = state => ({
   request: state.requests.request,
+  userRole: state.auth.user.roleId
 });
 
 const matchDispatchToProps = dispatch => bindActionCreators({

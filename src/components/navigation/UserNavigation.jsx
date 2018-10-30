@@ -13,10 +13,13 @@ class UserNavigation extends Component {
     logoutUser();
   }
 
+
   render() {
+    const { userRole } = this.props;
+
     return (
       <React.Fragment>
-        <li><Link to={routes.CREATE_REQUESTS}>Make Request</Link></li>
+        {userRole !== 1 && <li><Link to={routes.CREATE_REQUESTS}>Make Request</Link></li>}
         <li><Link to={routes.USER_REQUESTS}>View Requests</Link></li>
         <li>
           <Link
@@ -33,8 +36,13 @@ class UserNavigation extends Component {
 }
 
 UserNavigation.propTypes = {
+  userRole: PropTypes.number,
   logoutUser: PropTypes.func,
 };
+
+const mapStateToProps = state => ({
+  userRole: state.auth.user.roleId
+});
 
 const mapDispatchToProps = dispatch => bindActionCreators(
   {
@@ -43,4 +51,4 @@ const mapDispatchToProps = dispatch => bindActionCreators(
   dispatch
 );
 
-export default connect(null, mapDispatchToProps)(UserNavigation);
+export default connect(mapStateToProps, mapDispatchToProps)(UserNavigation);
