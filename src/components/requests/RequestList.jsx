@@ -33,7 +33,7 @@ const RequestList = ({
 
   return (
     <li className={`request ${requestClassName.statusType}`}>
-      <Link to={`/requests/${id}`} className="request-item">
+      <Link to={`/users/requests/${id}`} className="request-item">
         <p>{`#${refNo}`}</p>
         <p>{type === 1 ? 'Repair' : 'Maintenance'}</p>
         <p>{cap(item)}</p>
