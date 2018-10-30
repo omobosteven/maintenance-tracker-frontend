@@ -1,0 +1,84 @@
+.requests-list {
+  font-size: 1.3rem;
+  list-style: none;
+  margin-top: 30px;
+}
+
+.requests-list li {
+  margin: 0 auto 0.5rem;
+  max-width: 855px;
+}
+
+.request-item {
+  align-items: center;
+  background-color: #f1f1f1;
+  color: #4b4b4b;
+  cursor: pointer;
+  display: flex;
+  font-weight: 400;
+  justify-content: space-between;
+  padding-left: 1.0rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.request-item p {
+  pointer-events: none;
+  user-select: none;
+  width: 150px;
+}
+
+.request-item:hover,
+.request-item:active {
+  background-color: #a1a1a1;
+  color: #eceaea;
+}
+
+.requests-list .resolved {
+  border-left: 4px solid #44bd32;
+}
+
+.requests-list .approved {
+  border-left: 4px solid #d1a429;
+}
+
+.requests-list .disapproved {
+  border-left: 4px solid #e84118;
+}
+
+.requests-list .pending {
+  border-left: 4px solid #dcdde1;
+}
+
+.request-item .status-resolved,
+.request-item .status-approved,
+.request-item .status-disapproved,
+.request-item .status-pending {
+  color: #fff;
+  padding: 1.2rem 0;
+  text-align: center;
+  width: 120px;
+}
+
+.request-item .status-resolved {
+  background-color: #44bd32;
+}
+
+.request-item .status-approved {
+  background-color: #d1a429;
+}
+
+.request-item .status-disapproved {
+  background-color: #e84118;
+}
+
+.request-item .status-pending {
+  background-color: #dcdde1;
+  color: #555;
+}
+
+@media (min-width: 768px) {
+  .requests-list {
+      font-size: 1.6rem;
+  }
+}

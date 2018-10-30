@@ -23,6 +23,7 @@
   "homepage": "https://github.com/omobosteven/maintenance-tracker-frontend#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "capitalize": "^2.0.0",
     "cookies-js": "^1.2.3",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
