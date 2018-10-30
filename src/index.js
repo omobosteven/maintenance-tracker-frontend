@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import 'toastr/build/toastr.css';
 import store from './store/index';
 import AppRoutes from './routers/AppRoutes';
 import './styles/scss/App.scss';
