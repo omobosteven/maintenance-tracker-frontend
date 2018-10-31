@@ -6,10 +6,9 @@ import { connect } from 'react-redux';
 import routes from '../../constants/routes';
 import logoutAction from '../../actions/auth/logout.action';
 
-class UserNavigation extends Component {
-  onLogout = (event) => {
+export class UserNavigation extends Component {
+  onLogout = () => {
     const { logoutUser } = this.props;
-    event.preventDefault();
     logoutUser();
   }
 
