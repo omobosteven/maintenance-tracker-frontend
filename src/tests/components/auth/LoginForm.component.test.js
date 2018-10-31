@@ -53,7 +53,7 @@ describe('LoginForm', () => {
 
     password.simulate('change', event);
 
-    wrapper.setState({ errors: { [event.target.name]: 'mock' } });
+    wrapper.setState({ errors: { [event.target.name]: ['mock'] } });
     wrapper.instance().onChange(event);
     expect(wrapper.instance().state[event.target.name])
       .toBe(event.target.value);

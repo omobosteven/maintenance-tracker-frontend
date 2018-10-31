@@ -11,8 +11,7 @@ export class Header extends Component {
     toggleNav: ''
   }
 
-  onToggleNav = (event) => {
-    event.preventDefault();
+  onToggleNav = () => {
     const { toggleNav } = this.state;
     const toggle = toggleNav ? '' : 'navbar-show';
     this.setState({ toggleNav: toggle });

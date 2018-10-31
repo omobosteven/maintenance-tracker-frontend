@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 describe('', () => {
   const wrapper = shallow(<Footer />);
 
-  it('renders the AppRoutes component', () => {
+  it('renders the Footer component', () => {
     expect(wrapper.exists()).toBe(true);
   });
 });
