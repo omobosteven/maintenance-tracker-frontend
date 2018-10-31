@@ -10,9 +10,8 @@ export const getRequests = requests => ({
   requests
 });
 
-export const getRequestsError = error => ({
+export const getRequestsError = () => ({
   type: GET_REQUESTS_FAIL,
-  error
 });
 
 export const deleteErrorMessages = () => ({
