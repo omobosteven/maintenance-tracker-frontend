@@ -70,8 +70,7 @@ describe('Create Request Action', () => {
     });
 
     const expectedActions = [{
-      type: GET_REQUESTS_FAIL,
-      error: requestError
+      type: GET_REQUESTS_FAIL
     }];
 
     const store = mockStore({});
