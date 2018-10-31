@@ -19,7 +19,7 @@ exports[`LandingPage component should render a snapshot of the LandingPage compo
   <p
     className="main-text"
   >
-    Lorem Ipsum cool text right here...
+    Need Something fixed? Make a request.
   </p>
   <div
     className="main-buttons"
