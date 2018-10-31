@@ -78,6 +78,7 @@ export class LoginForm extends Component {
         {
           (error && error.message) ? (
             <ErrorAlertNotification
+              id="errorNotify"
               errors={error.message}
               onClick={this.handleDelete}
             />
@@ -87,6 +88,7 @@ export class LoginForm extends Component {
           <form className="signup-form">
             <h2 className="form-title">User Login</h2>
             <TextField
+              className="email"
               error={errors.email}
               label="Email"
               field="email"
@@ -96,6 +98,7 @@ export class LoginForm extends Component {
               type="email"
             />
             <TextField
+              className="password"
               error={errors.password}
               label="Password"
               field="password"
@@ -105,7 +108,7 @@ export class LoginForm extends Component {
               type="password"
             />
             <div className="submit-btn">
-              <input type="submit" value="Login" onClick={this.onSubmit} />
+              <input className="submit" type="submit" value="Login" onClick={this.onSubmit} />
               <p className="form-info">
                 Not registered ? create an account
                 <Link to={routes.SIGN_UP} className="form-link"> Signup</Link>

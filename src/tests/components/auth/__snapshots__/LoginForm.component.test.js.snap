@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm renders the LoginForm component 1`] = `
+<section
+  className="section-form container"
+>
+  <div
+    className="row card-form"
+  >
+    <form
+      className="signup-form"
+    >
+      <h2
+        className="form-title"
+      >
+        User Login
+      </h2>
+      <TextField
+        className="email"
+        field="email"
+        label="Email"
+        onChange={[Function]}
+        placeholder="Your email"
+        type="email"
+        value=""
+      />
+      <TextField
+        className="password"
+        field="password"
+        label="Password"
+        onChange={[Function]}
+        placeholder="Your password"
+        type="password"
+        value=""
+      />
+      <div
+        className="submit-btn"
+      >
+        <input
+          className="submit"
+          onClick={[Function]}
+          type="submit"
+          value="Login"
+        />
+        <p
+          className="form-info"
+        >
+          Not registered ? create an account
+          <Link
+            className="form-link"
+            replace={false}
+            to="/auth/signup"
+          >
+             Signup
+          </Link>
+        </p>
+      </div>
+    </form>
+  </div>
+</section>
+`;
+
+exports[`LoginForm should delete error message if there is an error 1`] = `
+<section
+  className="section-form container"
+>
+  <ErrorAlertNotification
+    errors="There is an error"
+    id="errorNotify"
+    onClick={[Function]}
+  />
+  <div
+    className="row card-form"
+  >
+    <form
+      className="signup-form"
+    >
+      <h2
+        className="form-title"
+      >
+        User Login
+      </h2>
+      <TextField
+        className="email"
+        field="email"
+        label="Email"
+        onChange={[Function]}
+        placeholder="Your email"
+        type="email"
+        value=""
+      />
+      <TextField
+        className="password"
+        field="password"
+        label="Password"
+        onChange={[Function]}
+        placeholder="Your password"
+        type="password"
+        value=""
+      />
+      <div
+        className="submit-btn"
+      >
+        <input
+          className="submit"
+          onClick={[Function]}
+          type="submit"
+          value="Login"
+        />
+        <p
+          className="form-info"
+        >
+          Not registered ? create an account
+          <Link
+            className="form-link"
+            replace={false}
+            to="/auth/signup"
+          >
+             Signup
+          </Link>
+        </p>
+      </div>
+    </form>
+  </div>
+</section>
+`;
+
+exports[`LoginForm should redirect user if user is already logged in 1`] = `
+<Redirect
+  push={false}
+  to="/users/requests"
+/>
+`;
+
+exports[`LoginForm should return error for invalid form submission 1`] = `
+<section
+  className="section-form container"
+>
+  <div
+    className="row card-form"
+  >
+    <form
+      className="signup-form"
+    >
+      <h2
+        className="form-title"
+      >
+        User Login
+      </h2>
+      <TextField
+        className="email"
+        error={
+          Array [
+            "The email field is required.",
+          ]
+        }
+        field="email"
+        label="Email"
+        onChange={[Function]}
+        placeholder="Your email"
+        type="email"
+        value=""
+      />
+      <TextField
+        className="password"
+        error={
+          Array [
+            "The password field is required.",
+          ]
+        }
+        field="password"
+        label="Password"
+        onChange={[Function]}
+        placeholder="Your password"
+        type="password"
+        value=""
+      />
+      <div
+        className="submit-btn"
+      >
+        <input
+          className="submit"
+          onClick={[Function]}
+          type="submit"
+          value="Login"
+        />
+        <p
+          className="form-info"
+        >
+          Not registered ? create an account
+          <Link
+            className="form-link"
+            replace={false}
+            to="/auth/signup"
+          >
+             Signup
+          </Link>
+        </p>
+      </div>
+    </form>
+  </div>
+</section>
+`;

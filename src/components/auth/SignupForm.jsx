@@ -81,6 +81,7 @@ export class SignupForm extends Component {
         {
           (error && error.message) ? (
             <ErrorAlertNotification
+              id="errorNotify"
               errors={error.message}
               onClick={this.handleDelete}
             />
@@ -90,6 +91,7 @@ export class SignupForm extends Component {
           <form className="signup-form">
             <h2 className="form-title">Create an account</h2>
             <TextField
+              className="username"
               error={errors.username}
               label="Username"
               field="username"
@@ -108,6 +110,7 @@ export class SignupForm extends Component {
               type="email"
             />
             <TextField
+              className="password"
               error={errors.password}
               label="Password"
               field="password"
@@ -126,7 +129,12 @@ export class SignupForm extends Component {
               type="password"
             />
             <div className="submit-btn">
-              <input type="submit" value="Create account" onClick={this.onSubmit} />
+              <input
+                className="submit"
+                type="submit"
+                value="Create account"
+                onClick={this.onSubmit}
+              />
               <p className="form-info">
                 Already have an account ?
                 <Link to={routes.SIGN_IN} className="form-link"> Login</Link>

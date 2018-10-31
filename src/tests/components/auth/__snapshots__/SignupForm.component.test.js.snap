@@ -1,0 +1,261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignupForm renders the SignupForm component 1`] = `
+<section
+  className="section-form container"
+>
+  <div
+    className="row card-form"
+  >
+    <form
+      className="signup-form"
+    >
+      <h2
+        className="form-title"
+      >
+        Create an account
+      </h2>
+      <TextField
+        className="username"
+        field="username"
+        label="Username"
+        onChange={[Function]}
+        placeholder="Your username"
+        type="text"
+        value=""
+      />
+      <TextField
+        field="email"
+        label="Email"
+        onChange={[Function]}
+        placeholder="Your email"
+        type="email"
+        value=""
+      />
+      <TextField
+        className="password"
+        field="password"
+        label="Password"
+        onChange={[Function]}
+        placeholder="Your password"
+        type="password"
+        value=""
+      />
+      <TextField
+        field="password_confirmation"
+        label="Confirm Password"
+        onChange={[Function]}
+        placeholder="Confirm your password"
+        type="password"
+        value=""
+      />
+      <div
+        className="submit-btn"
+      >
+        <input
+          className="submit"
+          onClick={[Function]}
+          type="submit"
+          value="Create account"
+        />
+        <p
+          className="form-info"
+        >
+          Already have an account ?
+          <Link
+            className="form-link"
+            replace={false}
+            to="/auth/login"
+          >
+             Login
+          </Link>
+        </p>
+      </div>
+    </form>
+  </div>
+</section>
+`;
+
+exports[`SignupForm should delete error message if there is an error 1`] = `
+<section
+  className="section-form container"
+>
+  <ErrorAlertNotification
+    errors="There is an error"
+    id="errorNotify"
+    onClick={[Function]}
+  />
+  <div
+    className="row card-form"
+  >
+    <form
+      className="signup-form"
+    >
+      <h2
+        className="form-title"
+      >
+        Create an account
+      </h2>
+      <TextField
+        className="username"
+        field="username"
+        label="Username"
+        onChange={[Function]}
+        placeholder="Your username"
+        type="text"
+        value=""
+      />
+      <TextField
+        field="email"
+        label="Email"
+        onChange={[Function]}
+        placeholder="Your email"
+        type="email"
+        value=""
+      />
+      <TextField
+        className="password"
+        field="password"
+        label="Password"
+        onChange={[Function]}
+        placeholder="Your password"
+        type="password"
+        value=""
+      />
+      <TextField
+        field="password_confirmation"
+        label="Confirm Password"
+        onChange={[Function]}
+        placeholder="Confirm your password"
+        type="password"
+        value=""
+      />
+      <div
+        className="submit-btn"
+      >
+        <input
+          className="submit"
+          onClick={[Function]}
+          type="submit"
+          value="Create account"
+        />
+        <p
+          className="form-info"
+        >
+          Already have an account ?
+          <Link
+            className="form-link"
+            replace={false}
+            to="/auth/login"
+          >
+             Login
+          </Link>
+        </p>
+      </div>
+    </form>
+  </div>
+</section>
+`;
+
+exports[`SignupForm should redirect user if user is already logged in 1`] = `
+<Redirect
+  push={false}
+  to="/users/requests"
+/>
+`;
+
+exports[`SignupForm should return error for invalid form submission 1`] = `
+<section
+  className="section-form container"
+>
+  <div
+    className="row card-form"
+  >
+    <form
+      className="signup-form"
+    >
+      <h2
+        className="form-title"
+      >
+        Create an account
+      </h2>
+      <TextField
+        className="username"
+        error={
+          Array [
+            "The username field is required.",
+          ]
+        }
+        field="username"
+        label="Username"
+        onChange={[Function]}
+        placeholder="Your username"
+        type="text"
+        value=""
+      />
+      <TextField
+        error={
+          Array [
+            "The email field is required.",
+          ]
+        }
+        field="email"
+        label="Email"
+        onChange={[Function]}
+        placeholder="Your email"
+        type="email"
+        value=""
+      />
+      <TextField
+        className="password"
+        error={
+          Array [
+            "The password field is required.",
+          ]
+        }
+        field="password"
+        label="Password"
+        onChange={[Function]}
+        placeholder="Your password"
+        type="password"
+        value=""
+      />
+      <TextField
+        error={
+          Array [
+            "The password confirmation field is required.",
+          ]
+        }
+        field="password_confirmation"
+        label="Confirm Password"
+        onChange={[Function]}
+        placeholder="Confirm your password"
+        type="password"
+        value=""
+      />
+      <div
+        className="submit-btn"
+      >
+        <input
+          className="submit"
+          onClick={[Function]}
+          type="submit"
+          value="Create account"
+        />
+        <p
+          className="form-info"
+        >
+          Already have an account ?
+          <Link
+            className="form-link"
+            replace={false}
+            to="/auth/login"
+          >
+             Login
+          </Link>
+        </p>
+      </div>
+    </form>
+  </div>
+</section>
+`;
