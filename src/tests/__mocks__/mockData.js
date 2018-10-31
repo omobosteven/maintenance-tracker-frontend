@@ -6,6 +6,11 @@ const mockData = {
     password_confirmation: 'password'
   },
 
+  loginData: {
+    email: 'blaze@gmail.com',
+    password: 'password',
+  },
+
   signUpDataError: {
     username: '',
     email: 'blaze@gmail.com',
@@ -52,6 +57,15 @@ const mockData = {
     description: 'the screen is bad',
     statusId: 1,
     createdAt: '2018-10-30T17:47:20.463Z',
+  },
+
+  authResponse: {
+    message: 'Welcome user',
+    data: {
+      data: {
+        token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3'
+      }
+    }
   }
 };
 
