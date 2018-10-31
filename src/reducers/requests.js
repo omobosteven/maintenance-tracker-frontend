@@ -58,7 +58,8 @@ export default (state = initialState, action) => {
       return {
         ...state,
         requests: [],
-        request: null
+        request: null,
+        error: action.error
       };
 
     case DELETE_REQUEST_ERROR_MESSAGE:
