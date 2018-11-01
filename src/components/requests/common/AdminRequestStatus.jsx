@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import adminRequestAction from '../../../actions/adminRequest.action';
 import fetchSingleRequestAction from '../../../actions/fetchSingleRequest.action';
 
-class AdminRequestStatus extends Component {
+export class AdminRequestStatus extends Component {
   onSetStatus = (type) => {
     const { action, requestId } = this.props;
     action.setRequestStatus(parseInt(requestId, 10), type)

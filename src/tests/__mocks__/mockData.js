@@ -27,7 +27,7 @@ const mockData = {
   },
 
   createRequestData: {
-    type: 1,
+    type: '1',
     category: 'computers',
     item: 'laptop',
     description: 'The screen is broken'

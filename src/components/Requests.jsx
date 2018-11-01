@@ -6,7 +6,7 @@ import fetchRequestsAction from '../actions/fetchRequests.action';
 import Loading from './common/Loading';
 import RequestList from './requests/RequestList';
 
-class Requests extends Component {
+export class Requests extends Component {
   componentDidMount = () => {
     const { fetchRequests, userRole } = this.props;
     fetchRequests(userRole);

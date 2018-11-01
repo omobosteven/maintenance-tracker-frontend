@@ -1,0 +1,544 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditRequestForm component should cancel update 1`] = `
+<section
+  className="section-form container"
+>
+  <div
+    className="row card-form"
+  >
+    <form
+      className="signup-form"
+    >
+      <h2
+        className="form-title"
+      >
+        Modify Request
+      </h2>
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="type"
+        >
+          Type
+        </label>
+        <select
+          className="form-control"
+          name="type"
+          onChange={[Function]}
+          value=""
+        >
+          <option
+            key="1"
+            value={1}
+          >
+            Repair
+          </option>
+          <option
+            key="2"
+            value={2}
+          >
+            Maintenance
+          </option>
+        </select>
+      </div>
+      <p
+        className="error"
+      />
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="category"
+        >
+          Category
+        </label>
+        <select
+          className="form-control"
+          name="category"
+          onChange={[Function]}
+          value=""
+        >
+          <option
+            key="computers"
+            value="computers"
+          >
+            Computers
+          </option>
+          <option
+            key="electronics"
+            value="electronics"
+          >
+            Electronics
+          </option>
+          <option
+            key="furnitures"
+            value="furnitures"
+          >
+            Furniture
+          </option>
+        </select>
+      </div>
+      <p
+        className="error"
+      />
+      <TextField
+        className="item"
+        field="item"
+        label="Item"
+        onChange={[Function]}
+        placeholder="Enter item"
+        type="text"
+        value=""
+      />
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="description"
+        >
+          Description
+        </label>
+        <textarea
+          className="form-control description"
+          data-gramm_editor="false"
+          name="description"
+          onChange={[Function]}
+          placeholder="Enter a description of the problem"
+          rows="4"
+          value=""
+        />
+      </div>
+      <div
+        className="submit-btn update-btn"
+      >
+        <input
+          className="submit"
+          onClick={[Function]}
+          type="submit"
+          value="Modify"
+        />
+        <input
+          className="cancel"
+          onClick={[Function]}
+          type="button"
+          value="Cancel"
+        />
+      </div>
+    </form>
+  </div>
+</section>
+`;
+
+exports[`EditRequestForm component should delete error message if there is an error 1`] = `
+<section
+  className="section-form container"
+>
+  <ErrorAlertNotification
+    errors="There is an error"
+    id="errorNotify"
+    onClick={[Function]}
+  />
+  <div
+    className="row card-form"
+  >
+    <form
+      className="signup-form"
+    >
+      <h2
+        className="form-title"
+      >
+        Modify Request
+      </h2>
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="type"
+        >
+          Type
+        </label>
+        <select
+          className="form-control"
+          name="type"
+          onChange={[Function]}
+          value=""
+        >
+          <option
+            key="1"
+            value={1}
+          >
+            Repair
+          </option>
+          <option
+            key="2"
+            value={2}
+          >
+            Maintenance
+          </option>
+        </select>
+      </div>
+      <p
+        className="error"
+      />
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="category"
+        >
+          Category
+        </label>
+        <select
+          className="form-control"
+          name="category"
+          onChange={[Function]}
+          value=""
+        >
+          <option
+            key="computers"
+            value="computers"
+          >
+            Computers
+          </option>
+          <option
+            key="electronics"
+            value="electronics"
+          >
+            Electronics
+          </option>
+          <option
+            key="furnitures"
+            value="furnitures"
+          >
+            Furniture
+          </option>
+        </select>
+      </div>
+      <p
+        className="error"
+      />
+      <TextField
+        className="item"
+        field="item"
+        label="Item"
+        onChange={[Function]}
+        placeholder="Enter item"
+        type="text"
+        value=""
+      />
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="description"
+        >
+          Description
+        </label>
+        <textarea
+          className="form-control description"
+          data-gramm_editor="false"
+          name="description"
+          onChange={[Function]}
+          placeholder="Enter a description of the problem"
+          rows="4"
+          value=""
+        />
+      </div>
+      <div
+        className="submit-btn update-btn"
+      >
+        <input
+          className="submit"
+          onClick={[Function]}
+          type="submit"
+          value="Modify"
+        />
+        <input
+          className="cancel"
+          onClick={[Function]}
+          type="button"
+          value="Cancel"
+        />
+      </div>
+    </form>
+  </div>
+</section>
+`;
+
+exports[`EditRequestForm component should render the EditRequestForm component 1`] = `
+<section
+  className="section-form container"
+>
+  <div
+    className="row card-form"
+  >
+    <form
+      className="signup-form"
+    >
+      <h2
+        className="form-title"
+      >
+        Modify Request
+      </h2>
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="type"
+        >
+          Type
+        </label>
+        <select
+          className="form-control"
+          name="type"
+          onChange={[Function]}
+          value=""
+        >
+          <option
+            key="1"
+            value={1}
+          >
+            Repair
+          </option>
+          <option
+            key="2"
+            value={2}
+          >
+            Maintenance
+          </option>
+        </select>
+      </div>
+      <p
+        className="error"
+      />
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="category"
+        >
+          Category
+        </label>
+        <select
+          className="form-control"
+          name="category"
+          onChange={[Function]}
+          value=""
+        >
+          <option
+            key="computers"
+            value="computers"
+          >
+            Computers
+          </option>
+          <option
+            key="electronics"
+            value="electronics"
+          >
+            Electronics
+          </option>
+          <option
+            key="furnitures"
+            value="furnitures"
+          >
+            Furniture
+          </option>
+        </select>
+      </div>
+      <p
+        className="error"
+      />
+      <TextField
+        className="item"
+        field="item"
+        label="Item"
+        onChange={[Function]}
+        placeholder="Enter item"
+        type="text"
+        value=""
+      />
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="description"
+        >
+          Description
+        </label>
+        <textarea
+          className="form-control description"
+          data-gramm_editor="false"
+          name="description"
+          onChange={[Function]}
+          placeholder="Enter a description of the problem"
+          rows="4"
+          value=""
+        />
+      </div>
+      <div
+        className="submit-btn update-btn"
+      >
+        <input
+          className="submit"
+          onClick={[Function]}
+          type="submit"
+          value="Modify"
+        />
+        <input
+          className="cancel"
+          onClick={[Function]}
+          type="button"
+          value="Cancel"
+        />
+      </div>
+    </form>
+  </div>
+</section>
+`;
+
+exports[`EditRequestForm component should return error for invalid form submission 1`] = `
+<section
+  className="section-form container"
+>
+  <div
+    className="row card-form"
+  >
+    <form
+      className="signup-form"
+    >
+      <h2
+        className="form-title"
+      >
+        Modify Request
+      </h2>
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="type"
+        >
+          Type
+        </label>
+        <select
+          className="form-control"
+          name="type"
+          onChange={[Function]}
+          value=""
+        >
+          <option
+            key="1"
+            value={1}
+          >
+            Repair
+          </option>
+          <option
+            key="2"
+            value={2}
+          >
+            Maintenance
+          </option>
+        </select>
+      </div>
+      <p
+        className="error"
+      >
+        The type field is required.
+      </p>
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="category"
+        >
+          Category
+        </label>
+        <select
+          className="form-control"
+          name="category"
+          onChange={[Function]}
+          value=""
+        >
+          <option
+            key="computers"
+            value="computers"
+          >
+            Computers
+          </option>
+          <option
+            key="electronics"
+            value="electronics"
+          >
+            Electronics
+          </option>
+          <option
+            key="furnitures"
+            value="furnitures"
+          >
+            Furniture
+          </option>
+        </select>
+      </div>
+      <p
+        className="error"
+      >
+        The type field is required.
+      </p>
+      <TextField
+        className="item"
+        error={
+          Array [
+            "The item field is required.",
+          ]
+        }
+        field="item"
+        label="Item"
+        onChange={[Function]}
+        placeholder="Enter item"
+        type="text"
+        value=""
+      />
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="description"
+        >
+          Description
+        </label>
+        <textarea
+          className="form-control description"
+          data-gramm_editor="false"
+          name="description"
+          onChange={[Function]}
+          placeholder="Enter a description of the problem"
+          rows="4"
+          value=""
+        />
+      </div>
+      <p
+        className="display-error"
+      >
+        The description field is required.
+      </p>
+      <div
+        className="submit-btn update-btn"
+      >
+        <input
+          className="submit"
+          onClick={[Function]}
+          type="submit"
+          value="Modify"
+        />
+        <input
+          className="cancel"
+          onClick={[Function]}
+          type="button"
+          value="Cancel"
+        />
+      </div>
+    </form>
+  </div>
+</section>
+`;
