@@ -28,7 +28,7 @@ describe('Request Reducer', () => {
     };
 
     const newState = requestReducer(state, action);
-    expect(newState.created.type).toEqual(1);
+    expect(newState.created.type).toEqual('1');
     done();
   });
 
@@ -41,7 +41,7 @@ describe('Request Reducer', () => {
     };
 
     const newState = requestReducer(state, action);
-    expect(newState.updated.type).toEqual(1);
+    expect(newState.updated.type).toEqual('1');
     done();
   });
 

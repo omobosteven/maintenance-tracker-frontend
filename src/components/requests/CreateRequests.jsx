@@ -9,7 +9,7 @@ import createRequestAction, {
   deleteErrorMessages
 } from '../../actions/createRequest.action';
 
-export class createRequestForm extends Component {
+export class CreateRequestForm extends Component {
   state = {
     type: '1',
     category: 'computers',
@@ -78,6 +78,7 @@ export class createRequestForm extends Component {
         {
           (error && error.message) ? (
             <ErrorAlertNotification
+              id="errorNotify"
               errors={error.message}
               onClick={this.handleDelete}
             />
@@ -121,6 +122,7 @@ export class createRequestForm extends Component {
             </div>
             <p className="error">{errors.type}</p>
             <TextField
+              className="item"
               error={errors.item}
               label="Item"
               field="item"
@@ -132,7 +134,7 @@ export class createRequestForm extends Component {
             <div className="form-group">
               <label htmlFor="description">Description</label>
               <textarea
-                className="form-control"
+                className="form-control description"
                 name="description"
                 value={description}
                 onChange={this.onChange}
@@ -143,7 +145,12 @@ export class createRequestForm extends Component {
             </div>
             { errors.description && <p className="display-error">{errors.description}</p> }
             <div className="submit-btn create-btn">
-              <input type="submit" value="Create Request" onClick={this.onSubmit} />
+              <input
+                className="submit"
+                type="submit"
+                value="Create Request"
+                onClick={this.onSubmit}
+              />
             </div>
           </form>
         </div>
@@ -152,7 +159,7 @@ export class createRequestForm extends Component {
   }
 }
 
-createRequestForm.propTypes = {
+CreateRequestForm.propTypes = {
   history: PropTypes.instanceOf(Object),
   error: PropTypes.instanceOf(Object),
   action: PropTypes.instanceOf(Object)
@@ -172,4 +179,4 @@ const matchDispatchToProps = dispatch => ({
   )
 });
 
-export default connect(mapStateToProps, matchDispatchToProps)(createRequestForm);
+export default connect(mapStateToProps, matchDispatchToProps)(CreateRequestForm);

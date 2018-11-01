@@ -25,8 +25,7 @@ const adminRequestAction = (id, type) => (dispatch) => {
     .then((response) => {
       const { message } = response.data;
       toastr.success(message);
-      dispatch(setRequestStatus());
-      return response;
+      return dispatch(setRequestStatus());
     })
     .catch((error) => {
       dispatch(setRequestStatusError(error.response.data));

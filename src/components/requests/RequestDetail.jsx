@@ -10,7 +10,7 @@ import routes from '../../constants/routes';
 import UserRequestStatus from './common/UserRequestStatus';
 import AdminRequestStatus from './common/AdminRequestStatus';
 
-class RequestDetails extends Component {
+export class RequestDetails extends Component {
   componentDidMount = () => {
     const { fetchRequest, match, userRole } = this.props;
     fetchRequest(match.params.id, userRole);

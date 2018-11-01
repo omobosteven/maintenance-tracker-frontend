@@ -99,6 +99,7 @@ export class EditRequestForm extends Component {
         {
           (error && error.message) ? (
             <ErrorAlertNotification
+              id="errorNotify"
               errors={error.message}
               onClick={this.handleDelete}
             />
@@ -142,6 +143,7 @@ export class EditRequestForm extends Component {
             </div>
             <p className="error">{errors.type}</p>
             <TextField
+              className="item"
               error={errors.item}
               label="Item"
               field="item"
@@ -153,7 +155,7 @@ export class EditRequestForm extends Component {
             <div className="form-group">
               <label htmlFor="description">Description</label>
               <textarea
-                className="form-control"
+                className="form-control description"
                 name="description"
                 value={description}
                 onChange={this.onChange}
@@ -164,8 +166,8 @@ export class EditRequestForm extends Component {
             </div>
             { errors.description && <p className="display-error">{errors.description}</p> }
             <div className="submit-btn update-btn">
-              <input type="submit" value="Modify" onClick={this.onSubmit} />
-              <input type="button" value="Cancel" onClick={this.onCancel} />
+              <input className="submit" type="submit" value="Modify" onClick={this.onSubmit} />
+              <input className="cancel" type="button" value="Cancel" onClick={this.onCancel} />
             </div>
           </form>
         </div>
